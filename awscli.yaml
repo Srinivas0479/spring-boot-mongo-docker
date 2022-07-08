@@ -6,3 +6,11 @@
        name: awscli
        update_cache: yes
        state: present
+- hosts:dockerdeployment
+  become: true
+  tasks:
+   - name: install docker-compose
+     apt:
+       name: docker-compose
+       update_cache: yes
+       state: present
